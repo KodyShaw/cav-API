@@ -1,0 +1,14 @@
+{
+  "name": "7cav-api",
+  "version": "1.0.0",
+  "description": "A test API call for the 7th cav API",
+  "main": "api-call.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kody Shaw",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
