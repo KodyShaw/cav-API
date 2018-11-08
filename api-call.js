@@ -6,7 +6,7 @@ const fs = require("fs")
 let cavName = "Shaw.K";
 
 //responds with the current amount of active users & finds ID for now
-orm.axiosGet(api.cavRequest, "users/active", function (response) {
+orm.axiosGet(api.cavRequest, "users/active", response => {
     // data = JSON.stringify(response.data, null, 4);
 
     //Work-around to find ID of user via exact match as i have no other way of knowing.
@@ -19,7 +19,6 @@ orm.axiosGet(api.cavRequest, "users/active", function (response) {
             console.log(ID);
         }
     }
-
 
     let userCounter = 0;
 
@@ -36,14 +35,14 @@ orm.axiosGet(api.cavRequest, "users/active", function (response) {
 
 function cavMilpac(ID) {
     //Returns JSON data of a specific User via an ID
-    orm.axiosGet(api.cavRequest, "user/" + ID + "/milpac", function (response) {
+    orm.axiosGet(api.cavRequest, "user/" + ID + "/milpac", response => {
         console.log(response.data);
     });
 }
 
 function cavRecord(ID) {
     //Returns JSON data of a specific User's record via an ID
-    orm.axiosGet(api.cavRequest, "user/" + ID + "/records", function (response) {
+    orm.axiosGet(api.cavRequest, "user/" + ID + "/records", response => {
         console.log(response.data);
     });
 }

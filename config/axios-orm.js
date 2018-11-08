@@ -1,6 +1,6 @@
 //ORM to be used with the axios call functions.
 const orm = {
-    axiosGet: function (request, query, callbackFunction) {
+    axiosGet: (request, query, callbackFunction) => {
         request.get(query).then(res => {
             callbackFunction(res.data);
         }).catch(err => {
